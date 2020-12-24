@@ -25,6 +25,9 @@
       var url = window.location.href;
       url = url.replace("liukun.site", "111.229.246.149");
       document.getElementById("main").src = url;
+      window.addEventListener("message", function (rs) {
+        console.log(rs.data);
+      });
     </script>
   </body>
 </html>
