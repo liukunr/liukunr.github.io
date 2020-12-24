@@ -18,7 +18,7 @@
       width="100%"
       style="position: absolute"
       height="100%"
-      src=""
+      src="#"
       frameborder="0"
     ></iframe>
     <script>
@@ -28,6 +28,7 @@
       window.onmessage = function (rs) {
         newUrl = rs.data.url.replace("111.229.246.149", "liukun.site");
         window.history.replaceState(null, null, newUrl);
+        document.title = rs.data.title;
       };
     </script>
   </body>
