@@ -27,7 +27,7 @@
       document.getElementById("main").src = url;
       window.addEventListener("message", function (rs) {
         console.log(rs.data);
-        window.history.pushState(null,null,rs.data.replace("111.229.246.149","liukun.site"));
+        window.history.replaceState(null,null,rs.data.replace("111.229.246.149","liukun.site"));
       });
     </script>
   </body>
