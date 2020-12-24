@@ -12,24 +12,26 @@
       }
     </style>
   </head>
-  <body onload="init()">
+  <body>
+    <iframe
+      id="main"
+      width="100%"
+      style="position: absolute"
+      height="100%"
+      src=""
+      frameborder="0"
+    ></iframe>
     <script>
-      function init() {
-        var url = window.location.href;
-        url = url.replace("liukun.site", "111.229.246.149");
-        document.write(
-          '<iframe id="main" width="100%" style="position: absolute" height="100%" src="' +
-            url +
-            '" frameborder="0"></iframe>'
+      var url = window.location.href;
+      url = url.replace("liukun.site", "111.229.246.149");
+      document.write("");
+      window.addEventListener("message", function (rs) {
+        window.history.replaceState(
+          null,
+          null,
+          rs.data.replace("111.229.246.149", "liukun.site")
         );
-        window.addEventListener("message", function (rs) {
-          window.history.replaceState(
-            null,
-            null,
-            rs.data.replace("111.229.246.149", "liukun.site")
-          );
-        });
-      }
+      });
     </script>
   </body>
 </html>
