@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>liukun.site</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe
+      id="main"
+      width="100%"
+      style="position: absolute"
+      height="100%"
+      src="#"
+      frameborder="0"
+    ></iframe>
+    <script>
+      var url = window.location.href;
+      url = url.replace("liukun.site", "111.229.246.149:2020/baota");
+      document.getElementById("main").src = url;
+    </script>
+  </body>
+</html>
