@@ -27,12 +27,8 @@
       document.getElementById("main").src = url;
       window.onmessage = function (rs) {
         newUrl = rs.data.url.replace("111.229.246.149", "liukun.site");
-        if (window.location.href == newUrl) {
-          document.title = rs.data.title;
-        } else {
-          window.history.replaceState(null, null, newUrl);
-          document.title = rs.data.title;
-        }
+        window.history.replaceState(null, null, newUrl);
+        document.title = rs.data.title;
       };
     </script>
   </body>
